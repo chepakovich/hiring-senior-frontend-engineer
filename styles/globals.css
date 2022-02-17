@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  body {
+    @apply text-sm leading-5 font-medium;
+  }
+
+  table {
+    color: #6b7280;
+  }
+
+  .wrapper {
+    @apply container max-w-screen-lg mx-auto;
+  }
+
+  .top-bar {
+    @apply sticky top-0 z-50 pt-10 pb-12 text-2xl leading-8 font-bold;
+    background: linear-gradient(
+      180deg,
+      #f9fafb 74.48%,
+      rgba(249, 250, 251, 0) 100%
+    );
+  }
+
+  .infocard {
+    @apply flex-1 bg-gray-200 p-4;
+    border-radius: theme('borderRadius.lg');
+  }
+
+  .infocard-main {
+    @apply text-xl font-bold pt-0;
+  }
+
+  .infocard-sub {
+    @apply text-sm text-gray-500;
+  }
+
+  .card {
+    @apply flex-1;
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
+  }
+
+  .card-title {
+    @apply pt-2 pb-4;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
